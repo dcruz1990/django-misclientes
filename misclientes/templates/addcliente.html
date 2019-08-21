@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+
+
+        <!-- Card de busqueda y resultado -->
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+		
+		<div class="row">
+            <div class="col m5 s12">
+                 <div class="card">
+                    <div class="card-content dark-text">
+		<form action="" method="post">
+			
+			{% csrf_token %} 
+			{{ form.non_field_errors }}
+			<div class="row">
+				<div class="input-field col s9">
+					{{ form.name.errors}}
+					<label for="{{ form.name.id_for_label }}">Nombre del Cliente:</label>
+					 {{ form.name }}
+			</div>
+			<div class="input-field col s9">
+					{{ form.lastname.errors}}
+					<label for="{{ form.enterprise_description.id_for_label }}">Apellidos:</label>
+					{{ form.lastname }}
+			</div>
+			
+			<div class="input-field col s9">
+				{% if error %}
+			  <span class="new badge red" data-badge-caption="custom caption">{{ error }}</span>
+			{% endif %}
+					{{ form.idnum.errors}}
+					<label for="{{ form.idnum.id_for_label }}">Nro de Carnet de Identidad:</label>
+					{{ form.idnum }}
+			</div>
+			<div class="input-field col s9">
+					{{ form.contract.errors}}
+					<label for="{{ form.contract.id_for_label }}">Contrato No:</label>
+					{{ form.contract }}
+			</div>
+			<div class="input-field col s9">
+					{{ form.enterprise.errors}}
+					<small class="dark-text">Empresa:</small>
+					{{ form.enterprise }}
+			</div>
+		
+		<button class="btn waves-effect waves-light" type="submit" name="action">Añadir!<i class="icon right">done</i>
+        </button>
+
+        </form>
+	</div>
+	</div>
+	</div>
+	</div>
+{% endblock %}
+
+{% block ayuda %}
+<div class="tap-target" data-target="menu">
+          <div class="tap-target-content">
+            <h5>Añadir Cliente</h5>
+            <p>1. Añadir las personas mediante el boton "Añadir Personas"</p>
+			<p>2. Completar el formulario restante.</p>
+          </div>
+      </div>
+{% endblock %}	  

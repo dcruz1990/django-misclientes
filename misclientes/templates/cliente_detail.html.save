@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main %}
+  <div class="col s12 m7">
+    <h1 class="header">Ficha de Cliente</h1>
+    <div class="card horizontal z-depth">
+      <div class="card-image">
+        <img src="{% static 'pesca.jpg' %}" style="width: 200px" >
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p><b>Titular:</b> {{ object.enterprise_name }}</p>
+		  <p><b>Domicilio Legal:</b> {{ object.address }}</p>
+		  <p><b>Telefono:</b> {{ object.phone }}</p>
+		  <p><b>Codigo:</b> {{ object.code }} <b>NIT No:</b> {{ object.nit }} <b>Banco en el que opera:</b> {{ object.bank }} </p>
+		  <p><b>Direccion del Banco:</b> {{ object.bank_address }} </p>
+		  <p><b>Cuenta en Moneda Nacional no:</b> {{ object.cup_account }} <b>Cuenta en CUC no:</b> {{ object.cuc_account }} </p>
+		  <p><b>Banco en el que opera:</b> {{ object.address }} <b>Contrato No</b> : {{ object.contract }} </p>
+		  <p><b>Registro Comercial en CUP no:</b> {{ object.commercial_register_cup }}  </p>
+		  <p><b>Registro Comercial en CUC:</b>{{ object.commercial_register_cuc }} <b>Licencia para operar en divisas:</b> {{ object.licence_to_operate_on_divisa }} </p>
+        </div>
+		<div class="card-content">
+		 <b> Relacion de personal autorizado a comprar:</b>Empresa<a href="/createperson/{{ object.id }}?redirect_to={{ object.id }}"><i class="small material-icons">add_box</i></a>
+			<table>
+        <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Carnet de Identidad</th>
+              <th>Cargo</th>
+							<th>Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+					{% for p in personas %}
+						<tr>
+            	<td>{{ p.name }} {{ p.lastname }} </td>
+            	<td>{{ p.idnum }}</td>
+            	<td>{{ p.rol }}</td>
+	{% if perms.misclientes.cambiar_enterprise %}
+							<td><a href="{% url 'edit-cliente' p.id %}?redirect_to={{ object.id }}" ><i class="small material-icons">edit</i></a>
+              <a href="{% url 'del-person' p.id %}?redirect_to={{ object.id }}" ><i class="small material-icons">delete</i></a></td>
+	{% endif %}
+             </tr>
+			    {% endfor %}
+        </tbody>
+      </table>
+         
+		 
+			<div class="card-action">
+    		<a href="/clientes/" class="tooltipped" data-position="left" data-tooltip="Ir atras"> <i class="medium material-icons">arrow_back</i></a>
+{% if perms.misclientes.cambiar_enterprise %} <a href="{% url 'edit-enterprise' enterprise.id %}?return_to_enterprise={{ enterprise.id }}" class="tooltipped" data-position="bottom" data-tooltip="Editar Ficha" ><i class="medium material-icons">edit</i></a> {% endif %}
+				<a href="{% url 'imprimir-ficha' enterprise.id %}" class="tooltipped" data-position="bottom" data-tooltip="Exportar PDF"><i class="medium material-icons">picture_as_pdf</i></a>
+        
+		  </div>
+	    
+		</div>
+       
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
+
+{% block ayuda %}
+  <div class="tap-target" data-target="menu">
+      <div class="tap-target-content">
+        <h5>Detalle del Cliente</h5>
+        <p>Contiene todos los detalles de la Empresa, al final aparece el menu para editar o exportar hacia PDF para luego imprimir, y un boton de ir atras</p>
+        <p>Ademas, aparecen opciones al lado de cada persona para su edicion.</p>       
+    </div>
+  </div>
+{% endblock %}
+{% block extrajavascript %}
+  <script language="javascript">
+  $(document).ready(function (){
+    Location.reload();
+  });
+  </script>
+{% endblock %}

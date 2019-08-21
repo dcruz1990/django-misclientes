@@ -1,0 +1,80 @@
+{% load staticfiles %}
+
+<html>
+<head>
+    <meta charset="utf-8">
+<style> 
+table,
+td {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+    @page {
+    size: landscape;
+    margin: 0.5cm 0.5cm 0.5cm 0.5cm;
+     
+    @bottom-center {
+        padding-top: 0.5cm;
+        font: 10pt "Playfair Display";      
+        text-align: center;
+        vertical-align: top;
+        
+    }
+}
+</style>
+<title>Todos los Clientes!</title>
+</head>
+<body>
+  <header>
+  <h1>Todos los Clientes </h1> 
+  Actualizado: {{ fecha }}, mostrando un total de {{ total }} registros en la Base de Datos
+  </header>
+   <section>
+        <article>
+        <table >
+        <thead>
+          <tr>
+              <th>Nombre del Cliente</th>
+              <th>Direccion</th>
+              <th>NIT</th>
+              <th>Codigo</th>
+              <th>Monto Deuda</th>
+              <th>Telefono</th>
+              <th>Banco</th>
+            </tr>
+        </thead>
+
+        <tbody>
+		{% for empresa in empresas %}
+        <tr>
+            <td>{{ empresa.enterprise_name}}</a></td>
+            <td>{{ empresa.address }}</td>
+			<td>{{ empresa.nit }}</td>
+            <td>{{ empresa.code }}</td>
+            {% if empresa.has_doubt %}
+                <td>{{ empresa.ammount_of_doubt }}</td>
+            {% else %}
+                <td>No Tiene</td>
+            {% endif %}    
+            
+
+            <td>{{ empresa.phone }}</td>
+            <td>{{ empresa.bank }}</td>
+        <tr>
+        {% endfor %}   
+        </tbody>
+      </table>
+        </article>    
+            
+    </section>
+    <footer>
+    Reporte generado por MisClientes V0.1
+    </footer>     
+</div>
+</body>
+</html>

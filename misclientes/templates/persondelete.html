@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main %}
+
+
+  <div class="col s12 m7">
+    <h5 class="header">Confirmando eliminación:</h5>
+    <div class="card horizontal red">
+      
+      <div class="card-stacked">
+        <div class="card-content white-text">
+          <p>Estas seguro/a de borrar la persona?</p><br>
+          <p><b>Nombre:</b> <p>{{ object.name }}</p>
+          <p><b>Apellidos:</b> <p>{{ object.lastname }}</p>
+          <p><b>CI:</b> <p>{{ object.idnum }}</p>
+          <p><b>Cargo:</b> <p>{{ object.rol }}</p>
+        </div>
+        <div class="card-action">
+        <form method="post">{% csrf_token %}
+          
+            <button class="btn waves-effect waves-light red darken-4" type="submit" name="action">BORRAR!
+                <i class="material-icons right">delete</i>
+            </button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block ayuda %}
+<div class="tap-target" data-target="menu">
+          <div class="tap-target-content">
+            <h5>Eliminar Persona</h5>
+            <p>Confirma si desea eliminar la persona seleccionada.</p>
+			
+          </div>
+      </div>
+{% endblock %}

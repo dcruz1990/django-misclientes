@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main %}
+
+
+  <div class="col s12 m7">
+    <h5 class="header">Nueva Persona:</h5>
+    <div class="card horizontal ">
+      
+      <div class="card-stacked">
+        <div class="card-content white-text">
+          <p>Añadir nueva persona</p><br>
+           <form method="post">{% csrf_token %} 
+          {{ form.as_p }} {{ lolo }}
+        </div>
+        <div class="card-action">
+            <button class="btn waves-effect waves-light blue darken-4" type="submit" name="action">CREAR
+                <i class="material-icons right">check</i>
+            </button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block ayuda %}
+<div class="tap-target" data-target="menu">
+          <div class="tap-target-content">
+            <h5>Crear Persona</h5>
+            <p>Permite crear una persona en la empresa seleccionada, el carnet de Identidad debe ser único</p>
+			
+          </div>
+      </div>
+{% endblock %}

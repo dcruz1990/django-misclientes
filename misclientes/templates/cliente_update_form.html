@@ -1,0 +1,68 @@
+﻿{% extends "base.html" %}
+{% load static %}
+{% block main %}
+
+
+
+ <form method="POST" id="updateperson" >
+{% csrf_token %}
+	<table>
+        <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Carnet de Identidad</th>
+              <th>Cargo</th>
+							
+          </tr>
+        </thead>
+
+        <tbody>
+					
+						<tr>
+            	<td>{{ form.name }} {{ form.lastname }} </td>
+            	<td>{{ form.idnum }}</td>
+            	<td>{{ form.rol }}</td>
+							
+             </tr>
+			   
+        </tbody>
+      </table>
+{{ clienteid }}
+
+<input type="submit" value="Actualizar"></td>
+</form>
+
+
+
+
+{% endblock %}
+
+{% block extrajavascript %}
+	<!-- <script language="javascript">
+	
+	
+	var $updateperson = $('#updateperson');
+	$updateperson.submit(function (event) {
+       event.preventDefault();
+	   $datospersona = $(this).serialize()
+       console.log($datospersona);
+	   $.ajax({
+                method: "POST",
+                data: $datospersona,
+				success: document.location.assign('/pepepepepe/'),
+                error: console.log('Error en la llamada AJAX'),
+
+        })
+    });      
+	</script> -->
+{% endblock %}
+
+{% block ayuda %}
+<div class="tap-target" data-target="menu">
+          <div class="tap-target-content">
+            <h5>Editar Persona</h5>
+            <p>Permite editar una persona, el carnet de Identidad debe ser único</p>
+			
+          </div>
+      </div>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+<!-- Card del resultado -->
+            <div class="col m6">
+                {% if err %}
+                    <div class="card red">
+                        <div class="card-content">
+                            <span class="card-title">NO existe en la BD!</span>
+                            No se ha encontrado ninguna coincidencia para: {{ criterio }}
+                        </div>
+                        
+                    </div>
+                    <a href="/index/" >Buscar de Nuevo!</a>
+                    {% endif %}
+                    
+                    {% if cliente %}
+                        {% for e in cliente %}
+                        <ul class="collection">
+                                <li class="collection-item avatar"><span class="new badge indigo" data-badge-caption="Cliente"></span>{% if e.has_doubt %}<span class="new badge red" data-badge-caption="en deudas">{{ e.ammount_of_doubt }}$</span>{% endif %}
+                                    <img src="{% static '484522.png' %}" alt="" class="circle">
+                                    <a href="/clientdetail/{{ e.id }}/"><span class="title">{{ e.enterprise_name }}</span></a>
+                                    <p>{{ e.enterprise_description }}<br></p>
+                                </li>
+                            </ul>
+                        {% endfor %}
+                    {% endif %}
+                    {% if gente %}
+                        {% for persona in gente %}
+                        <ul class="collection">
+                                <li class="collection-item avatar"><span class="new badge blue" data-badge-caption="Persona"></span>
+                                    <img src="{% static '484522.png' %}" alt="" class="circle">
+                                    <a href="/clientdetail/{{ e.id }}/"><span class="title">{{ persona.name }} {{ persona.lastname }}</span></a>
+                                    C.I: {{ persona.idnum }} Pertenece al Cliente: 
+                                        {% for cliente in persona.enterprise.all %}
+                                           <a href="{% url 'client-detail' cliente.pk %}" >{{ cliente.enterprise_name }} </a>
+                                        {% endfor %}
+                                </li>
+                            </ul>
+                        {% endfor %}
+                    {% endif %}
+                    {% if carnets %}
+                        {% for carnet in carnets %}
+                        <ul class="collection">
+                                <li class="collection-item avatar"><span class="new badge blue" data-badge-caption="Persona"></span>
+                                    <img src="{% static '484522.png' %}" alt="" class="circle">
+                                    <a href="/clientdetail/{{ e.id }}/"><span class="title">{{ carnet.name }} {{ carnet.lastname }}</span></a>
+                                    C.I: {{ carnet.idnum }} Pertenece al Cliente: {{ carnet.cogido }}
+                                </li>
+                            </ul>
+                        {% endfor %}
+                    {% endif %}
+                    {% if nit %}
+                        {% for e in nit %}
+                        <ul class="collection">
+                                <li class="collection-item avatar"><span class="new badge indigo" data-badge-caption="Cliente"></span>{% if e.has_doubt %}<span class="new badge red" data-badge-caption="en deudas">{{ e.ammount_of_doubt }}$</span>{% endif %}
+                                    <img src="{% static '484522.png' %}" alt="" class="circle">
+                                    <a href="/clientdetail/{{ e.id }}/"><span class="title">{{ e.enterprise_name }}</span></a>
+                                    <p>{{ e.enterprise_description }}<br></p>
+                                </li>
+                            </ul>
+                        {% endfor %}
+                    {% endif %}
+
+            </div>
+{% endblock %}
+            {% block footer %}
+            {% endblock %}

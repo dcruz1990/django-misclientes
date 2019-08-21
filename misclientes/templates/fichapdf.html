@@ -1,0 +1,93 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<style> 
+   table,
+td {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+    @page {
+    size: "letter";
+    margin: 0.5cm 0.5cm 0.5cm 0.5cm;
+    
+    @bottom-center {
+        padding-top: 0.5cm;
+        font: 10pt "Playfair Display";      
+        text-align: center;
+        vertical-align: top;
+        
+    }
+}
+</style>
+<title>Ficha de Cliente: {{ empresa.enterprise_name }} MisClientes V1.0</title>
+</head>
+<body>
+  <header>
+  <h2>FICHA DE CLIENTE </h2> 
+  
+  </header>
+   <section>
+        <article>
+            <b>Nombre de la Empresa: </b>{{ empresa.enterprise_name }} <br>
+            <b>Dirección: </b> {{ empresa.address }} <br>
+            <b>Código: </b> {{ empresa.code }} <br>
+            <b>Cuenta CUC: </b> {{ empresa.cuc_account }} <br>
+            <b>Cuenta CUP: </b> {{ empresa.cup_account }} <br>
+            <b>NIT: </b> {{ empresa.nit }} <br>
+            <b>Banco en el que opera: </b> {{ empresa.bank }} <br>
+             <b>Descripción de la Empresa: </b>{{ empresa.enterprise_description }} <br>
+            <b>Dirección del Banco: </b> {{ empresa.bank_address }} <br>
+            <b>Email: </b> {{ empresa.email }} <br>
+            <b>Teléfono: </b> {{ empresa.phone }} <br>
+            <b>Registro Comercial en CUC: </b> {{ empresa.commercial_register_cuc }} <br>
+            <b>Registro Comercial en CUP: </b> {{ empresa.commercial_register_cup }} <br>
+            <b>Licencia para operar en Divisa: </b> {{ empresa.licence_to_operate_on_divisa}} <br>
+            <b>No. Contrato: </b> {{ empresa.contract }} <br>
+        </article>    
+            
+    </section>
+    <section>
+        <article>
+            <h2>Relación de Personas Autorizadas y Rol</h2>
+            <table >
+        <thead>
+          <tr>
+            
+              <th>Nombre y Apellidos</th>
+              <th>No. Carnet</th>
+              <th>Cargo</th>
+              
+            </tr>
+        </thead>
+
+        <tbody>
+		{% for persona in personas %}
+        <tr>
+            <td>{{ persona.name}} {{ persona.lastname }}</td>
+            <td>{{ persona.idnum }}</td>
+			<td>{{ persona.rol }}</td>
+                    <tr>
+        {% endfor %}   
+        </tbody>
+      </table>
+            
+        <article>
+        
+    </section>     
+    <footer>
+    Actualizado: {{ empresa.last_update }} , Reporte generado por MisClientes V0.1
+    </footer>     
+</div>
+</body>
+</html>
+
+

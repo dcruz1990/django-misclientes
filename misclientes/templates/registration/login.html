@@ -1,0 +1,61 @@
+﻿{% load static %}
+
+ <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+ <link type="text/css" rel="stylesheet" href="{% static 'css/google_material_icons.css' %}" >
+ <link rel="icon" type="image/png" href="{% static 'favicon-32x32.png' %}" sizes="32x32" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+{% block main %}
+{% if form.errors %}
+ 
+ <div clas="col s6">
+    <div class="center-align">
+      <div class="card-panel red accent-3 s6">Su nombre de usuario y contraseña no coinciden. Por favor vuelva a intentarlo.</div>
+   </div>
+ </div>
+{% endif %}
+{% if next %}
+{% if user.is_authenticated %}
+ <div class="card red">
+    <div class="card-content white-text">
+    ¡Error! Su cuenta no tiene acceso a la operacion solicitada! por favor ingrese con una cuenta que tenga permisos!!
+    </div>
+ </div>
+{% else %}
+<div class="center-align">
+  <div class="card-panel  red accent-3" >
+    Por favor acceda para visualizar esta pagina
+  </div>
+</div>
+{% endif %}
+{% endif %}
+<div class="valign-wrapper">
+  <div class="row">
+    <div class="center-align">
+        <div class="col s25 m16 z-depth-1 blue lighten-5">
+          <div class="card  indigo darken-3 ">
+            <div class="card-content white-text">
+              <span class="card-title">Login|Mis Clientes|</span>
+              <p>Escriba su Nombre y Contraseña:</p></div></div>
+    		  <div class="input-field inline">
+    		  <form method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+              <table>
+                <tr>
+                  <td>{{ form.username.label_tag }}</td>
+                  <td>{{ form.username }}</td>
+                </tr>
+                <tr>
+                  <td>{{ form.password.label_tag }}</td>
+                  <td>{{ form.password }}</td>
+                </tr>
+              </table>
+              <br>
+              <input type="submit" class="waves-effect indigo darken-3 waves-light btn" value="login">
+              <input type="hidden" name="next" value="{{ next }}">
+          </form>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

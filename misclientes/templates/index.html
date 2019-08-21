@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+        <!-- Card de busqueda y resultado -->
+        <div class="row">
+            <div class="col m12 s12">
+                 <div class="card">
+                    <div class="card-content dark-text">
+                    <span class="card-title">Buscar</span>
+                        <p>Ingrese el nombre del Cliente, nombre de persona, carnets o Código REUP para buscar en la base de datos:</p><br>
+                    <!-- Formulario de Busqueda -->
+                        <div class="row">
+                        <form action="" method="post" class="col m12">{% csrf_token %}
+                            <div class="input-field inline">
+                                <input id="enterprise_name" type="text" class="validate" name="empresa" required>
+                                  <span class="helper-text" data-error="Inserte el nombre por favor!!" data-success="Correcto"></span>
+                                <label for="enterprise_name">Criterio:</label>
+                                  <button class="btn waves-effect waves-light" type="submit" name="action">Buscar!
+                                    <i class="icon right">search</i>
+                                  </button>
+                            </div>
+
+                        </form>
+                        </div>
+                    <!-- Fin del Formulario -->
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6 l6">
+                  <div class="card">
+                    <div class="card-content indigo lighten-2 white-text">
+                      <p class="card-stats-title">
+                        <i class="material-icons">trending_up</i>Total de Clientes:</p>
+                      <h4 class="card-stats-number">{{ total }}</h4>
+                      <p class="card-stats-compare">
+                        <i class="material-icons">check</i> Registrados en la base de datos.
+                        
+                      </p>
+                    </div>
+                    <div class="card-action indigo darken-1">
+                      <div id="profit-tristate" class="center-align"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6 l6">
+                  <div class="card">
+                    <div class="card-content indigo lighten-2 white-text">
+                      <p class="card-stats-title">
+                        <i class="material-icons">verified_user</i> Total de Personas:</p>
+                      <h4 class="card-stats-number">{{ personas }}</h4>
+                      <p class="card-stats-compare"> 
+                        <i class="material-icons">check</i> Registradas en la base de datos.
+                        
+                      </p>
+                    </div>
+                    <div class="card-action  indigo darken-1">
+                      <div id="invoice-line" class="center-align"></div>
+                    </div>
+                  </div>
+                </div>
+                        
+            <!-- <div class="col m6">
+                <div class="card m6">
+                    <div class="card-content dark-text">
+                    <span class="card-title">Total Clientes:</span>
+                    <p>La base de datos contiene</p>
+                    <p class="card-stats-title">
+                        <i class="material-icons">person_outline</i>Clientes</p>
+                      <h4 class="card-stats-number">{{ total }}</h4>
+                    </div>
+                </div>    
+            </div> -->
+                
+        </div>
+        
+{% endblock %}
+            {% block footer %}
+            {% endblock %}

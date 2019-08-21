@@ -1,0 +1,31 @@
+﻿{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+    <div class="row">
+        <table class="highlight">
+        <thead>
+          <tr>
+              <th>Nombre y Apellidos</th>
+              <th>C.I</th>
+              <th>Empresa</th>
+              <th>No. Contrato</th>
+          </tr>
+        </thead>
+
+        <tbody>
+       
+        <tr>
+          {% for c in Cliente_list %}  
+		  <td>{{ c.name }} {{ c.lastname }}</td>
+            <td>{{ c.idnum }}</td>
+            <td>{{ c.enterprise }}</td>
+            <td>{{ c.rol }}</td>
+          </tr>
+		  {% empty %}
+		<li>No Clients yet.</li>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+{% endblock %}
