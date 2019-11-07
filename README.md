@@ -7,10 +7,11 @@ Thanks to all Django Cuba Telegram Group!!!!!
 * @Felix Pupo
 * @Guillermo Roig
 
-# Instalation
+# Runing Dev Server
 1. Git clone repo
 2. Activate virtualenv on venv ```source venv/bin/activate```
 3. Run dev server: ```python3 manage.py runserver```
+3. Go to ```http://localhost:8000/```
 
 # Contact
 * druzbv1990@gmail.com
