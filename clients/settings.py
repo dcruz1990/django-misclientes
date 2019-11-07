@@ -133,11 +133,11 @@ STATIC_URL = '/static/'
 SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = '192.168.42.5'
+EMAIL_HOST = ''
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'misclientes@pescatun.alinet.cu'
-EMAIL_HOST_PASSWORD = 'Clientes*2019'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 
 
 
