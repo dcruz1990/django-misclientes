@@ -1,0 +1,36 @@
+version: "3.3"
+
+services:
+  nginx:
+    image: nginx:alpine
+    hostname: misclientes_nginx
+    container_name: misclientes_nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/misclientes.conf:/etc/nginx/conf.d/default.conf
+      - ../static:/static
+      - ../media:/media
+    networks:
+      - misclientes_net
+    depends_on:
+      - app
+
+  app:
+    build:
+      context: ../
+      dockerfile: .container/app/Dockerfile
+    container_name: misclientes_app
+    hostname: misclientes_app
+    env_file:
+      - ./app/local.env
+    volumes:
+      - ./app/local.ini:/app/src/uwsgi/config.ini
+      - ./app/local.env:/app/src/.env
+      - ../static:/app/src/static
+      - ../media:/app/src/media
+    networks:
+      - misclientes_net
+
+networks:
+  misclientes_net:
