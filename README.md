@@ -7,6 +7,21 @@ Thanks to all Django Cuba Telegram Group!!!!!
 * @Felix Pupo
 * @Guillermo Roig
 
+
+# Create virtual environment and install requirements
+
+1. Define virtualenv environment
+
+```
+virtualenv -p python .venv
+```
+
+2. Install requirements
+
+```
+pip install -r requirements
+```
+
 # Runing Dev Server
 1. Git clone repo
 2. Activate virtualenv on venv ```source venv/bin/activate```
