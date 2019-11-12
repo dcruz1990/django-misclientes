@@ -15,5 +15,11 @@ ENV/
 .idea/
 *.sqlite3
 
-.logs/
+.logs
 !.logs/.gitkeep
+
+media
+!media/.gitkeep
+
+static
+!static/.gitkeep
