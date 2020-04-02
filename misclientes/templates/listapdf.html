@@ -1,9 +1,9 @@
-{% load staticfiles %}
+{% load static %}
 
 <html>
 <head>
     <meta charset="utf-8">
-<style> 
+<style>
 table,
 td {
     border: 1px solid #333;
@@ -17,13 +17,13 @@ tfoot {
     @page {
     size: landscape;
     margin: 0.5cm 0.5cm 0.5cm 0.5cm;
-     
+
     @bottom-center {
         padding-top: 0.5cm;
-        font: 10pt "Playfair Display";      
+        font: 10pt "Playfair Display";
         text-align: center;
         vertical-align: top;
-        
+
     }
 }
 </style>
@@ -31,7 +31,7 @@ tfoot {
 </head>
 <body>
   <header>
-  <h1>Todos los Clientes </h1> 
+  <h1>Todos los Clientes </h1>
   Actualizado: {{ fecha }}, mostrando un total de {{ total }} registros en la Base de Datos
   </header>
    <section>
@@ -60,21 +60,21 @@ tfoot {
                 <td>{{ empresa.ammount_of_doubt }}</td>
             {% else %}
                 <td>No Tiene</td>
-            {% endif %}    
-            
+            {% endif %}
+
 
             <td>{{ empresa.phone }}</td>
             <td>{{ empresa.bank }}</td>
         <tr>
-        {% endfor %}   
+        {% endfor %}
         </tbody>
       </table>
-        </article>    
-            
+        </article>
+
     </section>
     <footer>
     Reporte generado por MisClientes V0.1
-    </footer>     
+    </footer>
 </div>
 </body>
 </html>
