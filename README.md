@@ -49,11 +49,19 @@ git clone https://github.com/dcruz1990/django-misclientes
 source .venv/bin/activate
 ```
 
+### Run makemigrations
+
+````
+python manage.py makemigrations
+````
+
+
 ### Run migrations
 
 ````
 python manage.py migrate
 ````
+
 
 ### Compile .po to .mo
 

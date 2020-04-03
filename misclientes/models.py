@@ -50,7 +50,7 @@ class Configuracion(models.Model):
     enterprise_ordering_by = models.CharField(max_length=30, choices=ENTERPRISE_ORDERING_CHOICES, default=ENTERPRISE_LAST_UPDATE)
     persons_ordering_by = models.CharField(max_length=50, default=PERSONS_IDNUM, choices=PERSON_ORDERING_CHOICES)
     app_color_theme = models.CharField(max_length=10, default=THEME_INDIGO, choices=THEME_CHOICES)
-    
+
     def __str__(self):
         return str(self.user) + " Cliente por: " + str(self.enterprise_ordering_by) + " Personas por: " + str(self.persons_ordering_by)
 
@@ -63,15 +63,15 @@ class Cliente(models.Model):
     #Hasta que tengamos pillow
     #signature = models.ImageField(null=True)
     # face = models.ImageField()
-    rol = models.ForeignKey('Role', on_delete="models.CASCADE", default=1)
+    rol = models.ForeignKey('Role', on_delete=models.CASCADE, default=1)
     last_update = models.DateTimeField(auto_now=True)
-   
+
     def __str__(self):
       return str(self.name) + str(self.lastname) + " " + str(self.rol)
-    
+
     class Meta:
       ordering = ['idnum']
-    
+
 
 class Enterprise(models.Model):
   enterprise_name = models.CharField(max_length=100, verbose_name='Nombre de la Empresa')
@@ -85,15 +85,15 @@ class Enterprise(models.Model):
   address = models.CharField(null=True, max_length=200, verbose_name='Domicilio Legal')
   phone = models.IntegerField(null=True, verbose_name='Número de Teléfono')
   email = models.EmailField(default="email@empresa.cu",)
-  code = models.CharField(null=True, verbose_name='Codigo',max_length=15) 
+  code = models.CharField(null=True, verbose_name='Codigo',max_length=15)
   nit = models.PositiveIntegerField(null=True, verbose_name='NIT')
   bank = models.CharField(null=True, max_length=200, verbose_name='Banco en el que opera')
   bank_address = models.CharField(null=True, max_length=200, verbose_name='Direccion del Banco')
-  cup_account = models.IntegerField(null=True, verbose_name='Cuenta en Moneda Nacional') 
-  cuc_account = models.IntegerField(null=True, verbose_name='Cuenta en CUC') 
+  cup_account = models.IntegerField(null=True, verbose_name='Cuenta en Moneda Nacional')
+  cuc_account = models.IntegerField(null=True, verbose_name='Cuenta en CUC')
   commercial_register_cup = models.IntegerField(null=True, verbose_name='Registro Comercial en CUP')
-  commercial_register_cuc = models.IntegerField(null=True, verbose_name='Registro Comercial en CUC') 
-  licence_to_operate_on_divisa = models.CharField(null=True, max_length=20, verbose_name='Licencia para Operar en Divisa') 
+  commercial_register_cuc = models.IntegerField(null=True, verbose_name='Registro Comercial en CUC')
+  licence_to_operate_on_divisa = models.CharField(null=True, max_length=20, verbose_name='Licencia para Operar en Divisa')
   contract = models.IntegerField(default=0, verbose_name="Número de Contrato")
   persons = models.ManyToManyField(Cliente, related_name="enterprise",limit_choices_to={'cogido': False})
   last_update = models.DateTimeField(auto_now=True)
@@ -112,14 +112,14 @@ class Enterprise(models.Model):
           should_send_email = True
     else:
       should_send_email = self.has_doubt
- 
+
     if should_send_email:
-        mensaje = mensaje = """Hola """ + self.enterprise_name + """este es un mensaje automatico generado por 
+        mensaje = mensaje = """Hola """ + self.enterprise_name + """este es un mensaje automatico generado por
         la app MisClientes V0.1.\n
         -------------------------------------------------------------
-        Se ha insertado una cuenta por pagar envejecida a nuestra Empresa: $""" + str(self.ammount_of_doubt) +""" moneda total. 
+        Se ha insertado una cuenta por pagar envejecida a nuestra Empresa: $""" + str(self.ammount_of_doubt) +""" moneda total.
         Por favor pongase en contacto con nuestro Dpto. Economico en 31 34 30 52 ext 138.
-	Por favor, no responda este correo, el mismo es generado por una computadora. 
+	Por favor, no responda este correo, el mismo es generado por una computadora.
         """
         send_mail("Notificacion", mensaje, "misclientes@pescatun.alinet.cu", [self.email], fail_silently=True)
         self.emailed = True
@@ -138,8 +138,8 @@ class Role(models.Model):
 
     def __str__(self):
         return self.rol
- 
 
 
-    
+
+
 

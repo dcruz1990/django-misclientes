@@ -1,9 +1,9 @@
-﻿{% load staticfiles %}
+﻿{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-<style> 
+<style>
    table,
 td {
     border: 1px solid #333;
@@ -18,13 +18,13 @@ tfoot {
     @page {
     size: "letter";
     margin: 0.5cm 0.5cm 0.5cm 0.5cm;
-    
+
     @bottom-center {
         padding-top: 0.5cm;
-        font: 10pt "Playfair Display";      
+        font: 10pt "Playfair Display";
         text-align: center;
         vertical-align: top;
-        
+
     }
 }
 </style>
@@ -32,8 +32,8 @@ tfoot {
 </head>
 <body>
   <header>
-  <h2>FICHA DE CLIENTE </h2> 
-  
+  <h2>FICHA DE CLIENTE </h2>
+
   </header>
    <section>
         <article>
@@ -52,8 +52,8 @@ tfoot {
             <b>Registro Comercial en CUP: </b> {{ empresa.commercial_register_cup }} <br>
             <b>Licencia para operar en Divisa: </b> {{ empresa.licence_to_operate_on_divisa}} <br>
             <b>No. Contrato: </b> {{ empresa.contract }} <br>
-        </article>    
-            
+        </article>
+
     </section>
     <section>
         <article>
@@ -61,11 +61,11 @@ tfoot {
             <table >
         <thead>
           <tr>
-            
+
               <th>Nombre y Apellidos</th>
               <th>No. Carnet</th>
               <th>Cargo</th>
-              
+
             </tr>
         </thead>
 
@@ -76,16 +76,16 @@ tfoot {
             <td>{{ persona.idnum }}</td>
 			<td>{{ persona.rol }}</td>
                     <tr>
-        {% endfor %}   
+        {% endfor %}
         </tbody>
       </table>
-            
+
         <article>
-        
-    </section>     
+
+    </section>
     <footer>
     Actualizado: {{ empresa.last_update }} , Reporte generado por MisClientes V0.1
-    </footer>     
+    </footer>
 </div>
 </body>
 </html>
