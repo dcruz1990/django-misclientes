@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main %}
+
+<div class="row">
+    {% if expired_list %}
+    <table class="highlight">
+        <thead>
+            <tr>
+                <th>No. de Contrato</th>
+                <th>Nombre de la Empresa</th>
+                <th>Descripcion</th>
+                <th>Tiene deuda?</th>
+                <th>Monto de la deuda</th>
+                <th>Fecha de Vencimiento</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+
+            {% for e in expired_list %}
+
+            <tr>
+                <td><span class="new badge indigo light" data-badge-caption="{{ e.contract }}"></span></td>
+                <td><a href=" /clientdetail/{{ e.id }}/">{{ e.enterprise_name }}</a></td>
+                <td>{{ e.enterprise_description }}</td>
+
+                {% if e.has_doubt %}
+                <td><span class="new badge red" data-badge-caption="Si"></span></td>
+                <td>{{ e.ammount_of_doubt }}</td>
+
+                {% else %}
+                <td><span class="new badge green" data-badge-caption="No"></span></td>
+                <td></td>
+                {% endif %}
+                <td> {{ e.expire_on }}</td>
+
+
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    {% else %}
+    No hay contratos que expiran este año!
+    {% endif %}
+</div>
+
+{% if expired_list %}
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+        <a href="?page=1">&laquo; Primero</a>
+        <a href="?page={{ page_obj.previous_page_number }}">Anterior</a>
+        {% endif %}
+        <span class="current">
+            Pagina {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+        </span>
+        {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Proximo</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}">Ultimo &raquo; </a>
+        {% endif %}
+    </span>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block ayuda %}
+<div class="tap-target" data-target="menu">
+    <div class="tap-target-content">
+        <h5>Expirados</h5>
+        Es el listado de todos los clientes que su contrato vence en el año en curso.
+
+    </div>
+</div>
+{% endblock %}

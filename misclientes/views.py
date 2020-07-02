@@ -226,6 +226,17 @@ class ClienteUpdate(UpdateView):
     def get_success_url(self):
         return reverse('client-detail', kwargs={'pk': self.request.GET.get('redirect_to')})
 
+
+#Detalles de los contratos expirados
+@method_decorator(login_required, name='dispatch')	
+class ExpiredContracts(generic.ListView):
+    template_name = 'expiredContracts.html'
+    context_object_name = 'expired_list'
+    paginate_by = 10
+    
+    def get_queryset(self):
+        return Enterprise.objects.filter(expire_on__year=datetime.now().year)
+
 #Exporta a pdf la ficha de cliente    
 @login_required
 def printToPDF(request, pk):

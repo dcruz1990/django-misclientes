@@ -1,95 +1,102 @@
-<!DOCTYPE html>
 {% load static %}
 {% load i18n %}
+<!doctype html>
 <html>
-  <html>
-    <head>
-    <meta charset="utf-8" />
-     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-      <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="{% static 'css/google_material_icons.css' %}" >
-      <link type="text/css" rel="stylesheet" href="{% static 'css/extra.css' %}" >
-       <link rel="icon" type="image/png" href="{% static 'favicon-32x32.png' %}" sizes="32x32" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<head>
+  <meta charset="utf-8" />
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="{% static 'css/google_material_icons.css' %}">
+  <link type="text/css" rel="stylesheet" href="{% static 'css/extra.css' %}">
+  <link rel="icon" type="image/png" href="{% static 'favicon-32x32.png' %}" sizes="32x32" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
 
-        <nav>
+  <nav>
     <div class="nav-wrapper indigo lighten-1">
-	       <a href="/index/" class="brand-logo right">Mis Clientes</a>
+      <a href="/index/" class="brand-logo right">Mis Clientes</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="icon">menu</i></a>
-	     Bienvenido/a   {{ user.username }}  .  <b>  <a href="{% url 'logout' %}">Terminar Sesion</a></b>
+      Bienvenido/a {{ user.username }} . <b> <a href="{% url 'logout' %}">Terminar Sesion</a></b>
       <ul class="left hide-on-med-and-down">
         <li><a href="/index/">Inicio</a></li>
         <li><a href="/clientes/">Clientes</a></li>
+        <li><a href="/expirados/">Expirados</a></li>
         {% if perms.misclientes.can_view %}
-		<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Nuevo<i class="material-icons right">arrow_drop_down</i></a></li>
-		{% endif %}
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Nuevo<i
+              class="material-icons right">arrow_drop_down</i></a></li>
+        {% endif %}
       </ul>
-Ultimo no. de contrato usado: <b>{{ ultimocontrato.contract__max }} </b>
+      Ultimo no. de contrato usado: <b>{{ ultimocontrato.contract__max }} </b>
     </div>
   </nav>
 
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a href="/addclientes">Cliente</a></li>
-        </ul>
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="/addclientes">Cliente</a></li>
+  </ul>
 
 
   <ul class="sidenav" id="mobile-demo">
     <li><a href="/index/">Inicio</a></li>
-        <li><a href="/clientes/">Empresas</a></li>
-        <li><a href="/addclientes">Nuevo Cliente</a></li>
-     </ul>
+    <li><a href="/clientes/">Empresas</a></li>
+    <li><a href="/addclientes">Nuevo Cliente</a></li>
+  </ul>
 
 
-    <title>Mis Clientes</title>
-    </head>
+  <title>Mis Clientes</title>
+</head>
 
-    <body>
+<body>
 
 
-    <!-- Contenido principal -->
-    <div class="container">
+  <!-- Contenido principal -->
+  <div class="container">
     {% block main %}
 
     {% endblock %}
+  </div>
+
+  {% block ayuda %}
+  <!-- Tap Target Structure -->
+  <div class="tap-target" data-target="menu">
+    <div class="tap-target-content">
+      <h5>Inicio</h5>
+      <p>Es la pantalla principal de la App, contiene un buscador por Empresa y acceso a los elementos del menu superior
+      </p>
     </div>
-
-    {% block ayuda %}
-      <!-- Tap Target Structure -->
-      <div class="tap-target" data-target="menu">
-          <div class="tap-target-content">
-            <h5>Inicio</h5>
-            <p>Es la pantalla principal de la App, contiene un buscador por Empresa y acceso a los elementos del menu superior</p>
-          </div>
-      </div>
-    {% endblock %}
+  </div>
+  {% endblock %}
 
 
-    <div class="fixed-action-btn">
-  <a id="menu" class="btn-floating btn-large red">
-    <i class="large material-icons">menu</i>
-  </a>
-  <ul>
-    {% if perms.misclientes.cambiar_enterprise %}<li><a class="btn-floating red" href="/addclientes/"><i class="material-icons">add</i></a></li>{% endif %}
-    <li><a class="btn-floating yellow darken-1" href="/index/"><i class="material-icons">search</i></a></li>
-    <li><a class="btn-floating green" href="{% url 'listaclientes' %}"><i class="material-icons">person</i></a></li>
-    <li><a class="btn-floating indigo" href="/accounts/logout"><i class="material-icons">logout</i></a></li>
-    <li><a class="btn-floating purple" href="{% url 'imprimir-todos-clientes'%}" ><i class="material-icons">print</i></a></li>
-    <li><a class="btn-floating blue" onClick="$('.tap-target').tapTarget('open')"><i class="material-icons">help</i></a></li>
+  <div class="fixed-action-btn">
+    <a id="menu" class="btn-floating btn-large red">
+      <i class="large material-icons">menu</i>
+    </a>
+    <ul>
+      {% if perms.misclientes.cambiar_enterprise %}<li><a class="btn-floating red" href="/addclientes/"><i
+            class="material-icons">add</i></a></li>{% endif %}
+      <li><a class="btn-floating yellow darken-1" href="/index/"><i class="material-icons">search</i></a></li>
+      <li><a class="btn-floating green" href="{% url 'listaclientes' %}"><i class="material-icons">person</i></a></li>
+      <li><a class="btn-floating indigo" href="/accounts/logout"><i class="material-icons">logout</i></a></li>
+      <li><a class="btn-floating purple" href="{% url 'imprimir-todos-clientes'%}"><i
+            class="material-icons">print</i></a></li>
+      <li><a class="btn-floating blue" onClick="$('.tap-target').tapTarget('open')"><i
+            class="material-icons">help</i></a></li>
 
-  </ul>
-   </div>
+    </ul>
+  </div>
 
-    {% block footer %}
-    {% endblock %}
-      <script type="text/javascript" src="{% static 'js/jquery-2.2.2.min.js' %}"></script>
-      <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
-      <script type="text/javascript" src="{% static 'js/clientes.js' %}"></script>
-      <script type="text/javascript" src="{% static 'js/pace.min.js' %}"></script>
+  {% block footer %}
+  {% endblock %}
+  <script type="text/javascript" src="{% static 'js/jquery-2.2.2.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/clientes.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/pace.min.js' %}"></script>
 
-    {% block extrajavascript %}
+  {% block extrajavascript %}
 
-    {% endblock %}
-    </body>
-  </html>
+  {% endblock %}
+</body>
+
+</html>

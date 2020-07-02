@@ -10,11 +10,12 @@ from django.urls import path, include
 
 from misclientes.views import index, ListaClientesView, addempresa, deletemodel, AddPersonaView, \
     ClienteDetailView, EnterpriseUpdate, ClienteUpdate, ClienteDeleteView, ClienteCreateView, printToPDF, \
-    printClientList
+    printClientList, ExpiredContracts
 
 urlpatterns = [
     path('index/', index, name='index'),
     path('clientes/', ListaClientesView.as_view(), name='listaclientes'),
+    path('expirados/', ExpiredContracts.as_view(), name='expired-contracts'),
     path('addclientes/', addempresa, name='addclientes'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('delete/<id>/', deletemodel, name='delmodel'),

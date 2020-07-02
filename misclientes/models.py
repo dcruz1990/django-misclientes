@@ -74,6 +74,13 @@ class Cliente(models.Model):
 
 
 class Enterprise(models.Model):
+
+  tipo_contratos = (
+     ('Suministros', 'Suministros'),
+     ('Compraventa CUC', 'Compraventa CUC'),
+     ('Compraventa CUP', 'Compraventa CUP'),
+  ) 
+
   enterprise_name = models.CharField(max_length=100, verbose_name='Nombre de la Empresa')
   enterprise_description = models.CharField(max_length=100, null=True, default="Ingrese la descripción de la empresa"
                                                                                  " o algún comentario...",
@@ -99,11 +106,16 @@ class Enterprise(models.Model):
   last_update = models.DateTimeField(auto_now=True)
   emailed = models.BooleanField(default=False)
   updated = models.BooleanField(default=False, verbose_name="Actualizado?")
+  signed = models.DateField(null=True)
+  expire_on = models.DateField(null=True)
+  type_of_contract = models.CharField(max_length=20, null=True, choices=tipo_contratos)
+
 
   def __str__(self):
     return self.enterprise_name
 
   def save(self, *args, **kwargs):
+    self.expire_on = self.signed + timedelta(days=365)
     should_send_email = False
     if self.pk:
       deuda_actual = Enterprise.objects.get(pk=self.pk).ammount_of_doubt

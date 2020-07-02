@@ -1,8 +1,8 @@
-FROM python:3.6
+FROM python:3.8-slim
 
 LABEL maintainer="Alain Sánchez <brazzisoft.com@gmail.com>" \
-      company="BRAZZISOFT"  \
-      project="MisClientes"
+    company="BRAZZISOFT"  \
+    project="MisClientes"
 
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONOPTIMIZE 1
@@ -23,12 +23,12 @@ ENV STATIC_HOME $APP_HOME/static
 # .: 1. Install apt-utils package & Required Locales
 RUN apt-get -qq update && \
     apt-get -qqy install  \
-                          apt-utils \
-                          locales  \
-                          python-virtualenv \
-                          build-essential \
-                          gettext \
-                          xvfb  && \
+    apt-utils \
+    locales  \
+    python-virtualenv \
+    build-essential \
+    gettext \
+    xvfb  && \
     rm -rf /var/lib/apt/lists/*
 
 # .: 2. Configure Locales dynamically

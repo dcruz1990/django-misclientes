@@ -14,6 +14,12 @@ Thanks to all [Django Cuba](https://t.me/DjangoCuba) Telegram Group!!!!!
 
 ## Create virtual environment and install requirements
 
+### Clone this repository
+
+````git
+git clone https://github.com/dcruz1990/django-misclientes
+````
+
 ### Define virtualenv environment
 
 ```
@@ -36,18 +42,6 @@ If you are using Debian like distributions you need to install these packages:
 
 
 ## Run server in local environment
-
-### Clone this repository
-
-````git
-git clone https://github.com/dcruz1990/django-misclientes
-````
-
-### Activate virtualenv on .venv 
-
-```
-source .venv/bin/activate
-```
 
 ### Run makemigrations
 
