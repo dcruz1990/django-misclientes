@@ -9,7 +9,7 @@
 ####################################################################
 
 from django.http import HttpResponse, JsonResponse, HttpRequest
-from .models import Cliente, Enterprise, Configuracion
+from .models import Cliente, Enterprise, Configuracion, Type_of_Contract
 from django.views.generic import DetailView, ListView, FormView
 from .forms import ClienteForm, EmpresaForm
 from django.shortcuts import render, HttpResponseRedirect, redirect, get_object_or_404
@@ -182,6 +182,7 @@ class ClienteDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         cliente = Enterprise.objects.get(pk=self.kwargs['pk'])
         context['personas'] = cliente.persons.all()
+        context['tipo_de_contrato'] = cliente.type_of_contract.all()
         return context
 
 #Edita un Cliente		

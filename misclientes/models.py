@@ -6,7 +6,7 @@
 
 from django.db import models
 from django.urls import reverse
-from django.utils.timezone import datetime
+from django.utils.timezone import datetime, timedelta
 from django.core.mail import EmailMultiAlternatives, send_mail
 from django.template.loader import get_template
 from django.contrib.auth.models import User
@@ -108,7 +108,7 @@ class Enterprise(models.Model):
   updated = models.BooleanField(default=False, verbose_name="Actualizado?")
   signed = models.DateField(null=True)
   expire_on = models.DateField(null=True)
-  type_of_contract = models.CharField(max_length=20, null=True, choices=tipo_contratos)
+  type_of_contract = models.ManyToManyField('Type_of_Contract', related_name="tipo_contrato")
 
 
   def __str__(self):
@@ -150,6 +150,12 @@ class Role(models.Model):
 
     def __str__(self):
         return self.rol
+
+class Type_of_Contract(models.Model):
+  contract = models.CharField(max_length=50)
+
+  def __str__(self):
+    return self.contract
 
 
 

@@ -45,7 +45,9 @@
         </td>
         <td>
           {% if e.type_of_contract %}
-          <span class="new badge indigo light" data-badge-caption="{{ e.type_of_contract }}"></span>
+            {% for tipo in e.type_of_contract.all %}
+          <span class="new badge indigo light" data-badge-caption="{{ tipo }}"></span>
+            {% endfor %}
           {% endif %}
         </td>
         <td><a href=" /clientdetail/{{ e.id }}/">{{ e.enterprise_name }}</a></td>

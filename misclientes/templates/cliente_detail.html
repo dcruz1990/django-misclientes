@@ -10,7 +10,14 @@
     <div class="card-stacked">
       <div class="card-content">
         <p><b>Titular:</b> {{ object.enterprise_name }}</p>
-        <p><b>Tipo de Contrato:</b> {{ object.type_of_contract }}</p>
+        <p><b>Tipo de Contrato:</b>
+          <ul> {% for tipo in tipo_de_contrato  %}
+            <li>{{ tipo }}</li>
+            {% endfor %}
+          </ul>
+          
+          
+        </p>
         <p><b>Domicilio Legal:</b> {{ object.address }}</p>
         <p><b>Telefono:</b> {{ object.phone }}</p>
         <p><b>Codigo:</b> {{ object.code }} <b>NIT No:</b> {{ object.nit }} <b>Banco en el que opera:</b>

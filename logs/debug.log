@@ -428,3 +428,386 @@ tz
 [2020-08-03 17:00:46,605] INFO "GET /clientdetail/131/ HTTP/1.1" 200 6940
 [2020-08-03 17:00:46,686] INFO "GET /static/pesca.jpg HTTP/1.1" 200 37683
 [2020-08-03 17:00:49,221] INFO "GET /printreport/131 HTTP/1.1" 200 23467
+[2020-08-03 17:01:33,954] INFO "GET /addclientes/ HTTP/1.1" 200 10745
+[2020-08-03 17:01:34,701] INFO "GET /expirados/ HTTP/1.1" 200 8997
+[2020-08-03 17:01:44,522] INFO "GET /addclientes/ HTTP/1.1" 200 10745
+[2020-08-03 17:03:41,003] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/models.py changed, reloading.
+[2020-08-03 17:03:41,452] INFO Watching for file changes with StatReloader
+[2020-08-03 17:03:51,724] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/models.py changed, reloading.
+[2020-08-03 17:03:52,214] INFO Watching for file changes with StatReloader
+[2020-08-03 17:05:11,765] INFO Watching for file changes with StatReloader
+[2020-08-03 17:05:15,252] INFO "GET /addclientes/ HTTP/1.1" 200 10534
+[2020-08-03 17:05:15,596] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
+[2020-08-03 17:05:21,825] INFO "GET /admin/ HTTP/1.1" 200 8588
+[2020-08-03 17:05:22,085] INFO "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[2020-08-03 17:05:51,603] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/admin.py changed, reloading.
+[2020-08-03 17:05:52,104] INFO Watching for file changes with StatReloader
+[2020-08-03 17:05:54,171] INFO "GET /admin/ HTTP/1.1" 200 9093
+[2020-08-03 17:05:55,660] INFO "GET /admin/misclientes/type_of_contract/ HTTP/1.1" 200 3321
+[2020-08-03 17:05:55,764] INFO "GET /static/admin/css/changelists.css HTTP/1.1" 200 6190
+[2020-08-03 17:05:55,783] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 7069
+[2020-08-03 17:05:55,787] INFO "GET /static/admin/js/core.js HTTP/1.1" 200 5723
+[2020-08-03 17:05:55,789] INFO "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[2020-08-03 17:05:55,807] INFO "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[2020-08-03 17:05:55,807] INFO "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+[2020-08-03 17:05:55,808] INFO "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+[2020-08-03 17:05:55,808] INFO "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+[2020-08-03 17:05:55,815] INFO "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 287630
+[2020-08-03 17:05:55,824] INFO "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[2020-08-03 17:05:55,932] INFO "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[2020-08-03 17:05:56,990] INFO "GET /admin/misclientes/type_of_contract/add/ HTTP/1.1" 200 4161
+[2020-08-03 17:05:57,066] INFO "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[2020-08-03 17:05:57,067] INFO "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+[2020-08-03 17:05:57,067] INFO "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[2020-08-03 17:05:57,076] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 7069
+[2020-08-03 17:05:57,124] INFO "GET /static/admin/css/widgets.css HTTP/1.1" 200 10322
+[2020-08-03 17:05:59,742] INFO "POST /admin/misclientes/type_of_contract/add/ HTTP/1.1" 302 0
+[2020-08-03 17:05:59,864] INFO "GET /admin/misclientes/type_of_contract/ HTTP/1.1" 200 4760
+[2020-08-03 17:05:59,937] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 7069
+[2020-08-03 17:06:00,022] INFO "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[2020-08-03 17:06:01,426] INFO "GET /admin/misclientes/type_of_contract/add/ HTTP/1.1" 200 4161
+[2020-08-03 17:06:01,506] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 7069
+[2020-08-03 17:06:04,372] INFO "POST /admin/misclientes/type_of_contract/add/ HTTP/1.1" 302 0
+[2020-08-03 17:06:04,483] INFO "GET /admin/misclientes/type_of_contract/ HTTP/1.1" 200 5009
+[2020-08-03 17:06:04,557] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 7069
+[2020-08-03 17:06:05,531] INFO "GET /admin/misclientes/type_of_contract/add/ HTTP/1.1" 200 4161
+[2020-08-03 17:06:05,605] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 7069
+[2020-08-03 17:06:09,006] INFO "POST /admin/misclientes/type_of_contract/add/ HTTP/1.1" 302 0
+[2020-08-03 17:06:09,139] INFO "GET /admin/misclientes/type_of_contract/ HTTP/1.1" 200 5252
+[2020-08-03 17:06:09,210] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 7069
+[2020-08-03 17:06:16,355] INFO "GET / HTTP/1.1" 200 1768
+[2020-08-03 17:06:20,282] INFO "POST / HTTP/1.1" 302 0
+[2020-08-03 17:06:20,374] INFO "GET /index/ HTTP/1.1" 200 7009
+[2020-08-03 17:06:21,990] INFO "GET /addclientes/ HTTP/1.1" 200 10667
+[2020-08-03 17:06:44,849] INFO "POST /addpersonas/ HTTP/1.1" 200 40
+[2020-08-03 17:06:46,754] INFO "GET /addclientes/ HTTP/1.1" 200 10732
+[2020-08-03 17:07:05,995] ERROR Internal Server Error: /addclientes/
+Traceback (most recent call last):
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py", line 101, in addempresa
+    nuevaempresa = empresa.save()
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/forms/models.py", line 459, in save
+    self.instance.save()
+  File "/home/dcruz/WebApps/Github/django-misclientes/misclientes/models.py", line 118, in save
+    self.expire_on = self.signed + timedelta(days=365)
+NameError: name 'timedelta' is not defined
+[2020-08-03 17:07:05,999] ERROR "POST /addclientes/ HTTP/1.1" 500 96381
+[2020-08-03 17:07:45,688] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/models.py changed, reloading.
+[2020-08-03 17:07:46,271] INFO Watching for file changes with StatReloader
+[2020-08-03 17:07:50,504] INFO "POST /addclientes/ HTTP/1.1" 302 0
+[2020-08-03 17:07:50,616] INFO "GET /index/ HTTP/1.1" 200 7009
+[2020-08-03 17:07:53,197] INFO "GET /clientes/ HTTP/1.1" 200 21000
+[2020-08-03 17:07:57,994] INFO "GET /clientes/?page=14 HTTP/1.1" 200 14087
+[2020-08-03 17:08:00,410] INFO "GET /clientdetail/142/ HTTP/1.1" 200 6014
+[2020-08-03 17:08:58,573] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 17:08:59,007] INFO Watching for file changes with StatReloader
+[2020-08-03 17:09:45,099] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 17:09:45,533] INFO Watching for file changes with StatReloader
+[2020-08-03 17:10:14,146] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 17:10:14,656] INFO Watching for file changes with StatReloader
+[2020-08-03 17:11:10,762] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 17:11:11,194] INFO Watching for file changes with StatReloader
+[2020-08-03 17:12:44,388] ERROR Internal Server Error: /clientdetail/142/
+Traceback (most recent call last):
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py", line 184, in get_context_data
+    contract = Type_of_Contract.objects.get(pk=self.kwargs['pk'])
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/db/models/query.py", line 415, in get
+    raise self.model.DoesNotExist(
+misclientes.models.Type_of_Contract.DoesNotExist: Type_of_Contract matching query does not exist.
+[2020-08-03 17:12:44,392] ERROR "GET /clientdetail/142/ HTTP/1.1" 500 108017
+[2020-08-03 17:15:03,693] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/models.py changed, reloading.
+[2020-08-03 17:15:04,207] INFO Watching for file changes with StatReloader
+[2020-08-03 17:15:20,136] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 17:15:20,597] INFO Watching for file changes with StatReloader
+[2020-08-03 17:15:31,875] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 17:15:32,299] INFO Watching for file changes with StatReloader
+[2020-08-03 17:15:51,577] INFO Watching for file changes with StatReloader
+[2020-08-03 17:16:25,691] ERROR Internal Server Error: /clientdetail/142/
+Traceback (most recent call last):
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py", line 184, in get_context_data
+    contract = Type_of_Contract.objects.get(pk=self.kwargs['pk'])
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/db/models/query.py", line 415, in get
+    raise self.model.DoesNotExist(
+misclientes.models.Type_of_Contract.DoesNotExist: Type_of_Contract matching query does not exist.
+[2020-08-03 17:16:25,694] ERROR "GET /clientdetail/142/ HTTP/1.1" 500 108039
+[2020-08-03 17:16:45,072] INFO "GET /addclientes/ HTTP/1.1" 200 10667
+[2020-08-03 17:16:51,344] INFO "GET /clientes/ HTTP/1.1" 200 21000
+[2020-08-03 17:17:21,210] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 17:17:21,637] INFO Watching for file changes with StatReloader
+[2020-08-03 17:17:35,798] INFO "GET /clientes/?page=14 HTTP/1.1" 200 14087
+[2020-08-03 17:17:37,817] ERROR Internal Server Error: /clientdetail/142/
+Traceback (most recent call last):
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py", line 184, in get_context_data
+    contract = Type_of_Contract.objects.get(pk=self.kwargs['pk'])
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/db/models/query.py", line 415, in get
+    raise self.model.DoesNotExist(
+misclientes.models.Type_of_Contract.DoesNotExist: Type_of_Contract matching query does not exist.
+[2020-08-03 17:17:37,819] ERROR "GET /clientdetail/142/ HTTP/1.1" 500 107903
+[2020-08-03 17:19:57,077] INFO Watching for file changes with StatReloader
+[2020-08-03 17:19:59,787] ERROR Internal Server Error: /clientdetail/142/
+Traceback (most recent call last):
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py", line 184, in get_context_data
+    contract = Type_of_Contract.objects.get(pk=self.kwargs['pk'])
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/db/models/query.py", line 415, in get
+    raise self.model.DoesNotExist(
+misclientes.models.Type_of_Contract.DoesNotExist: Type_of_Contract matching query does not exist.
+[2020-08-03 17:19:59,789] ERROR "GET /clientdetail/142/ HTTP/1.1" 500 108039
+[2020-08-03 17:21:20,466] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/models.py changed, reloading.
+[2020-08-03 17:21:21,034] INFO Watching for file changes with StatReloader
+[2020-08-03 17:21:27,095] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 17:21:27,559] INFO Watching for file changes with StatReloader
+[2020-08-03 17:21:30,457] ERROR Internal Server Error: /clientdetail/142/
+Traceback (most recent call last):
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py", line 184, in get_context_data
+    contract = Type_of_Contract.objects.get(pk=self.kwargs['pk'])
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/db/models/query.py", line 415, in get
+    raise self.model.DoesNotExist(
+misclientes.models.Type_of_Contract.DoesNotExist: Type_of_Contract matching query does not exist.
+[2020-08-03 17:21:30,458] ERROR "GET /clientdetail/142/ HTTP/1.1" 500 108036
+[2020-08-03 17:21:58,727] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 17:21:59,238] INFO Watching for file changes with StatReloader
+[2020-08-03 17:22:01,497] ERROR Internal Server Error: /clientdetail/142/
+Traceback (most recent call last):
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py", line 185, in get_context_data
+    context['tipo_de_contrato'] = cliente.tipo_contrato.all()
+AttributeError: 'Enterprise' object has no attribute 'tipo_contrato'
+[2020-08-03 17:22:01,498] ERROR "GET /clientdetail/142/ HTTP/1.1" 500 99096
+[2020-08-03 17:22:14,128] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 17:22:14,785] INFO Watching for file changes with StatReloader
+[2020-08-03 17:22:16,805] INFO "GET /clientdetail/142/ HTTP/1.1" 200 6056
+[2020-08-03 17:22:37,849] INFO "GET /clientdetail/142/ HTTP/1.1" 200 6120
+[2020-08-03 17:22:38,109] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
+[2020-08-03 17:22:50,589] INFO "GET /clientdetail/142/ HTTP/1.1" 200 6096
+[2020-08-03 17:22:50,956] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
+[2020-08-03 17:23:35,824] INFO "GET /clientdetail/142/ HTTP/1.1" 200 6188
+[2020-08-03 17:23:36,149] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
+[2020-08-03 17:23:46,492] INFO "GET /clientes/ HTTP/1.1" 200 21000
+[2020-08-03 17:25:20,764] ERROR Internal Server Error: /clientes/
+Traceback (most recent call last):
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/defaulttags.py", line 165, in render
+    values = list(values)
+TypeError: 'ManyRelatedManager' object is not iterable
+[2020-08-03 17:25:20,765] ERROR "GET /clientes/ HTTP/1.1" 500 202294
+[2020-08-03 17:27:33,295] INFO "GET /clientes/ HTTP/1.1" 200 20030
+[2020-08-03 17:27:33,679] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
+[2020-08-03 17:27:53,924] INFO "GET /clientes/ HTTP/1.1" 200 20030
+[2020-08-03 17:27:54,264] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
+[2020-08-03 17:28:03,959] INFO "GET /clientes/ HTTP/1.1" 200 20030
+[2020-08-03 17:28:04,287] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
+[2020-08-03 17:28:06,689] INFO "GET /clientes/?page=14 HTTP/1.1" 200 13505
+[2020-08-03 17:28:51,478] ERROR Internal Server Error: /clientes/
+Traceback (most recent call last):
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/defaulttags.py", line 165, in render
+    values = list(values)
+TypeError: 'ManyRelatedManager' object is not iterable
+[2020-08-03 17:28:51,479] ERROR "GET /clientes/?page=14 HTTP/1.1" 500 193782
+[2020-08-03 17:35:01,440] INFO "GET /clientes/?page=14 HTTP/1.1" 200 13842
+[2020-08-03 17:35:01,853] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
+[2020-08-03 17:36:02,111] INFO "GET /clientes/?page=14 HTTP/1.1" 200 13842
+[2020-08-03 17:36:02,468] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
+[2020-08-03 17:36:11,882] INFO "GET /clientdetail/142/ HTTP/1.1" 200 6188
+[2020-08-03 17:36:39,110] INFO "GET /clientes/?page=14 HTTP/1.1" 200 13815
+[2020-08-03 17:36:39,441] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
