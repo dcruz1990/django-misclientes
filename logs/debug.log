@@ -291,3 +291,140 @@ django.core.exceptions.ImproperlyConfigured: You're using the staticfiles app wi
 [2020-08-03 16:45:39,018] INFO Watching for file changes with StatReloader
 [2020-08-03 16:45:41,585] INFO "GET /addclientes/ HTTP/1.1" 200 10522
 [2020-08-03 16:45:41,972] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
+[2020-08-03 16:48:40,671] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 16:48:41,226] INFO Watching for file changes with StatReloader
+[2020-08-03 16:48:47,573] ERROR Internal Server Error: /printclientlist
+Traceback (most recent call last):
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/defaulttags.py", line 1021, in find_library
+    return parser.libraries[name]
+KeyError: 'staticfiles'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py", line 265, in printClientList
+    html = render_to_string("listapdf.html", {
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/defaulttags.py", line 1078, in load
+    lib = find_library(parser, name)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/defaulttags.py", line 1023, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'staticfiles' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+[2020-08-03 16:48:47,579] ERROR "GET /printclientlist HTTP/1.1" 500 147509
+[2020-08-03 16:49:48,285] INFO "GET /printclientlist HTTP/1.1" 200 17428
+[2020-08-03 16:50:29,612] INFO "GET /clientes/ HTTP/1.1" 302 0
+[2020-08-03 16:50:29,654] INFO "GET /accounts/login/?next=/clientes/ HTTP/1.1" 200 1915
+[2020-08-03 16:50:33,755] INFO "POST / HTTP/1.1" 302 0
+[2020-08-03 16:50:33,795] INFO "GET /clientes/ HTTP/1.1" 200 20816
+[2020-08-03 16:50:39,114] INFO "GET /printclientlist HTTP/1.1" 200 86728
+[2020-08-03 16:52:28,801] INFO "GET /printclientlist HTTP/1.1" 200 86729
+[2020-08-03 16:53:20,315] INFO "GET /printclientlist HTTP/1.1" 200 86730
+[2020-08-03 16:53:58,138] INFO "GET /clientes/ HTTP/1.1" 200 20816
+[2020-08-03 16:53:58,490] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
+[2020-08-03 16:54:56,334] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 16:54:56,808] INFO Watching for file changes with StatReloader
+[2020-08-03 16:55:11,617] INFO Watching for file changes with StatReloader
+[2020-08-03 16:55:40,751] INFO "GET /clientes/ HTTP/1.1" 200 20816
+[2020-08-03 16:55:41,106] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
+[2020-08-03 16:55:43,236] ERROR Internal Server Error: /printclientlist
+Traceback (most recent call last):
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/defaulttags.py", line 1021, in find_library
+    return parser.libraries[name]
+KeyError: 'staticfiles'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py", line 265, in printClientList
+    html = render_to_string("listapdf.html", {
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/defaulttags.py", line 1078, in load
+    lib = find_library(parser, name)
+  File "/home/dcruz/WebApps/environments/misclientesenv/lib64/python3.8/site-packages/django/template/defaulttags.py", line 1023, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'staticfiles' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+[2020-08-03 16:55:43,239] ERROR "GET /printclientlist HTTP/1.1" 500 149977
+[2020-08-03 16:55:53,986] INFO "GET /printclientlist HTTP/1.1" 200 88419
+[2020-08-03 16:57:54,122] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 16:57:54,676] INFO Watching for file changes with StatReloader
+[2020-08-03 16:58:01,775] INFO "GET /printclientlist HTTP/1.1" 200 88289
+[2020-08-03 17:00:05,068] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 17:00:05,554] INFO Watching for file changes with StatReloader
+[2020-08-03 17:00:13,446] INFO "GET /printclientlist HTTP/1.1" 200 88290
+[2020-08-03 17:00:41,971] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/views.py changed, reloading.
+[2020-08-03 17:00:42,497] INFO Watching for file changes with StatReloader
+[2020-08-03 17:00:46,605] INFO "GET /clientdetail/131/ HTTP/1.1" 200 6940
+[2020-08-03 17:00:46,686] INFO "GET /static/pesca.jpg HTTP/1.1" 200 37683
+[2020-08-03 17:00:49,221] INFO "GET /printreport/131 HTTP/1.1" 200 23467

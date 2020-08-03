@@ -257,7 +257,7 @@ def printToPDF(request, pk):
 #Exporta a pdf todos los clientes
 @login_required
 def printClientList(request):
-    enterprise = Enterprise.objects.all().order_by('nit')
+    enterprise = Enterprise.objects.all().order_by('signed')
     total_clientes = enterprise.count()
     fecha = datetime.today()
     response = HttpResponse(content_type="application/pdf")
@@ -272,42 +272,5 @@ def printClientList(request):
     HTML(string=html).write_pdf(response, font_config=font_config)
     return response
 
-#class GeneratePDF(View):
-#    def get(self, request, *args, **kwargs):
-#        enterprise = Enterprise.objects.all().order_by('nit')
-#        total_clientes = enterprise.count()
-#        fecha = datetime.today()
-#        template = get_template('listapdf.html')
-#        context = {
-#        'empresas': enterprise,
-#        'fecha': fecha,
-#        'total': total_clientes
-#        }
-#        html = template.render(context)
-#        pdf = render_to_pdf('listapdf.html', context)
-#        return HttpResponse(pdf, content_type='application/pdf')
-
-#from xhtml2pdf import pisa
-#from io import BytesIO
-
-def generatepdf(request):
-    template_path = 'pdftodos.html'
-    enterprise = Enterprise.objects.all().order_by('nit')
-    total_clientes = enterprise.count()
-    fecha = datetime.today()
-    context = {
-        'empresas': enterprise,
-        'fecha': fecha,
-        'total': total_clientes
-        }
-    response = HttpResponse(content_type="Application/pdf")
-    response['Content-Disposition'] = 'attachment; filename="report.pdf"'
-    template = get_template(template_path)
-    html = template.render(context)
-
-    pisaStatus = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), dest=response, encoding="ISO-8859-1")
-    if pisaStatus.err:
-        return HttpResponse("Error " + html)
-    return response
 
 

@@ -44,7 +44,7 @@ tfoot {
               <th>NIT</th>
               <th>Codigo</th>
               <th>Monto Deuda</th>
-              <th>Telefono</th>
+              <th>No.Contrato</th>
               <th>Banco</th>
             </tr>
         </thead>
@@ -63,7 +63,7 @@ tfoot {
             {% endif %}    
             
 
-            <td>{{ empresa.phone }}</td>
+            <td>{{ empresa.contract }}</td>
             <td>{{ empresa.bank }}</td>
         <tr>
         {% endfor %}   

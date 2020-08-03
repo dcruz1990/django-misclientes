@@ -1,4 +1,4 @@
-{% load staticfiles %}
+
 
 <html>
 
@@ -47,7 +47,7 @@
                         <th>NIT</th>
                         <th>Código</th>
                         <th>Monto Deuda</th>
-                        <th>Teléfono</th>
+                        <th>No.Contrato</th>
                         <th>Vence</th>
                     </tr>
                 </thead>
@@ -66,7 +66,7 @@
                         {% endif %}
 
 
-                        <td>{{ empresa.phone }}</td>
+                        <td>{{ empresa.contract }}</td>
                         <td>{{ empresa.expire_on }}</td>
                     <tr>
                         {% endfor %}
