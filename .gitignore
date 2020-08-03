@@ -23,3 +23,6 @@ media
 
 static
 !static/.gitkeep
+
+.vscode/
+

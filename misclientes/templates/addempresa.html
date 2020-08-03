@@ -2,197 +2,214 @@
 {% load static %}
 
 {% block main %}
-        <!-- Card de busqueda y resultado -->
-        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-        <!-- Modal Structure -->
-  
+<!-- Card de busqueda y resultado -->
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<!-- Modal Structure -->
+
 
 <!-- Modal Para añadir Personas -->
-	<div id="modal1" class="modal">
-    	<div class="modal-content">
-      		<h4>Añadir una nueva persona</h4>
-			        <div class="row">
-						<form data-url='/addpersonas/' method="POST" class="addpersonas">
-							{% csrf_token %}
-							{{ clienteform.non_field_errors }}
-							<div class="input-field col s9 m4">
-								{{ clienteform.name.errors}}
-								<label>Nombre: </label>
-				 				{{ clienteform.name }}
-            				</div>
-            				<div class="input-field col s9 m4">
-								{{ clienteform.lastname.errors}}
-								<label>Apellidos: </label>
-				 				{{ clienteform.lastname }}
-            				</div>
-             				<div class="input-field col s9 m4">
-								{{ clienteform.idnum.errors}}
-								<label>No. de Carnet: </label>
-				 				{{ clienteform.idnum }}
-            				</div>
-            				<div class="input-field col s9 m4">
-								{{ clienteform.rol.errors}}
-								<p>Rol que ocupa:</p>
-				 				{{ clienteform.rol }}
-            				</div>
-            				{{ clienteform.cogido }}
-            				<div class="row">
-            				<button class="btn waves-effect waves-light" type="submit" name="action">Añadir!<i class="icon right">publish</i>
-							</button>
-							</div>
-            			</form>
-					</div>
-		</div>
-		<div class="modal-footer">
-			<input type="submit" class="modal-close btn-flat waves-effect" value="Hecho!" id="closemodal">
-		</div>
-	</div>		
-	<!-- Fin del Modal -->    
-
+<div id="modal1" class="modal">
+	<div class="modal-content">
+		<h4>Añadir una nueva persona</h4>
 		<div class="row">
-            <div class="col m11  s12">
-                 <div class="card">
-                    <div class="card-content dark-text">
-						<form action="" id="clienteform" method="post" >{% csrf_token %}
-							<div class="row">
-								<div class="input-field col s9 m4">
-									{{ form.enterprise_name.errors}}
-									<label for="{{ form.enterprise_name.id_for_label }}">Nombre de la Empresa:</label>
-									{{ form.enterprise_name }}
-								</div>
-								<div class="input-field col s9 m4">
-									{{ form.address.errors}}
-									<label for="{{ form.address.id_for_label }}">Dirección:</label>
-									{{ form.address }}
-								</div>
-								<div class="input-field col s9 m4">
-									{% if form.phone.errors %}
- 										<ol>
-								    		{% for error in form.subject.errors %}
-								        		<li><strong>{{ error|escape }}</strong></li>
-								    		{% endfor %}
-								    	</ol>
-									{% endif %}
-									<label for="{{ form.phone.id_for_label }}">Teléfono:</label>
-									{{ form.phone }}
-								</div>
-							</div>
-							<div  class="row">
-								<div class="input-field col s9 m4">
-									{{ form.email.errors}}
-									<label for="{{ form.email.id_for_label }}">Dirección de Correo:</label>
-									 {{ form.email }}
-									</div>
-								<div class="input-field col s9 m4">
-									{{ form.code.errors }}
-									<label for="{{ form.code.id_for_label }}">Código:</label>
-									{{ form.code }}
-								</div>
-								<div class="input-field col s9 m4">
-									{{ form.nit.errors}}
-									<label for="{{ form.nit.id_for_label }}">NIT:</label>
-									{{ form.nit }}
-								</div>
-							</div>
-							<div class="row">
-								<div class="input-field col s9 m4">
-									{{ form.bank.errors}}
-									<label for="{{ form.bank.id_for_label }}">Banco:</label>
-									{{ form.bank }}
-								</div>
-								<div class="input-field col s9 m4">
-									{{ form.bank_address.errors}}
-									<label for="{{ form.bank_address.id_for_label }}">Dirección del Banco:</label>
-									{{ form.bank_address }}
-								</div>
-								<div class="input-field col s9 m2">
-									{{ form.cup_account.errors}}
-									<label for="{{ form.cup_account.id_for_label }}">Cuenta en CUP:</label>
-									{{ form.cup_account }}
-								</div>
-								<div class="input-field col s9 m2">
-									{{ form.cuc_account.errors}}
-									<label for="{{ form.cuc_account.id_for_label }}">Cuenta en CUC:</label>
-									{{ form.cuc_account }}
-								</div>
-							</div>
-							<div class="row">
-								<div class="input-field col s9 m4">
-									{{ form.commercial_register_cup.errors }}
-									<label for="{{ form.commercial_register_cup.id_for_label }}">Registro Comercial CUP:</label>
-									{{ form.commercial_register_cup }}
-								</div>
-								<div class="input-field col s9 m4">
-									{{ form.commercial_register_cuc.errors}}
-									<label for="{{ form.commercial_register_cuc.id_for_label }}">Registro Comercial CUC:</label>
-									{{ form.commercial_register_cuc }}
-								</div>
-								<div class="input-field col s9 m4">
-									{{ form.licence_to_operate_on_divisa.errors}}
-									<label for="{{ form.licence_to_operate_on_divisa.id_for_label }}">Licencia CUC:</label>
-									{{ form.licence_to_operate_on_divisa }}
-								</div>
-							</div>
-							<div class="row">
-								<div class="input-field col s9 m4">
-									{{ form.contract.errors }}
-									<label for="{{ form.contract.id_for_label }}">Contrato:</label>
-									{{ form.contract }}
-								</div>
-								
-							
-								<div class="input-field col s9 m4 ">
-									{{ form.enterprise_description.errors}}
-									<label for="{{ form.enterprise_description.id_for_label }}">Descripción de la Empresa:</label>
-									{{ form.enterprise_description }}
-									<p>
-										<label>
-										{{ form.has_doubt }}
-										<span>Tiene deudas con PESCATUN ??</span>
-										</label>
-									</p>
-								</div>	
-								<div class="input-field col s9 m4">
-									{{ form.ammount_of_doubt.errors}}
-									<label for="{{ form.ammount_of_doubt.id_for_label }}" id="monto" style="Display: none">Monto de la Deuda:</label>
-									{{ form.ammount_of_doubt }}
-								</div>
-								<div class="input-field col s9 m4">
-									{{ form.persons.errors}}
-									<label for="{{ form.person.id_for_label }}">Personal</label>
-									{{ form.persons }}
-									<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Añadir Personas</a>
-								</div>
-								<div class="row" id="inputDeuda">
-								</div>
-								<div class="input-field col s9 m4">
-								<p>
-								<label>
-									{{ form.updated }}
-								<span> Contrato actualizado? </span>
-								 </label>
-								</p>	
-								</div>
-							</div>
-						
-							<button id="clienteadd" class="btn waves-effect waves-light" type="submit" name="action">Añadir!<i class="icon right">done</i>
-							</button>
-						</form>
-					</div>
+			<form data-url='/addpersonas/' method="POST" class="addpersonas">
+				{% csrf_token %}
+				{{ clienteform.non_field_errors }}
+				<div class="input-field col s9 m4">
+					{{ clienteform.name.errors}}
+					<label>Nombre: </label>
+					{{ clienteform.name }}
 				</div>
+				<div class="input-field col s9 m4">
+					{{ clienteform.lastname.errors}}
+					<label>Apellidos: </label>
+					{{ clienteform.lastname }}
+				</div>
+				<div class="input-field col s9 m4">
+					{{ clienteform.idnum.errors}}
+					<label>No. de Carnet: </label>
+					{{ clienteform.idnum }}
+				</div>
+				<div class="input-field col s9 m4">
+					{{ clienteform.rol.errors}}
+					<p>Rol que ocupa:</p>
+					{{ clienteform.rol }}
+				</div>
+				{{ clienteform.cogido }}
+				<div class="row">
+					<button class="btn waves-effect waves-light" type="submit" name="action">Añadir!<i
+							class="icon right">publish</i>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<input type="submit" class="modal-close btn-flat waves-effect" value="Hecho!" id="closemodal">
+	</div>
+</div>
+<!-- Fin del Modal -->
+
+<div class="row">
+	<div class="col m11  s12">
+		<div class="card">
+			<div class="card-content dark-text">
+				<form action="" id="clienteform" method="post">{% csrf_token %}
+					<div class="row">
+						<div class="input-field col s9 m4">
+							{{ form.enterprise_name.errors}}
+							<label for="{{ form.enterprise_name.id_for_label }}">Nombre de la Empresa:</label>
+							{{ form.enterprise_name }}
+						</div>
+						<div class="input-field col s9 m4">
+							{{ form.address.errors}}
+							<label for="{{ form.address.id_for_label }}">Dirección:</label>
+							{{ form.address }}
+						</div>
+						<div class="input-field col s9 m4">
+							{% if form.phone.errors %}
+							<ol>
+								{% for error in form.subject.errors %}
+								<li><strong>{{ error|escape }}</strong></li>
+								{% endfor %}
+							</ol>
+							{% endif %}
+							<label for="{{ form.phone.id_for_label }}">Teléfono:</label>
+							{{ form.phone }}
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s9 m4">
+							{{ form.email.errors}}
+							<label for="{{ form.email.id_for_label }}">Dirección de Correo:</label>
+							{{ form.email }}
+						</div>
+						<div class="input-field col s9 m4">
+							{{ form.code.errors }}
+							<label for="{{ form.code.id_for_label }}">Código:</label>
+							{{ form.code }}
+						</div>
+						<div class="input-field col s9 m4">
+							{{ form.nit.errors}}
+							<label for="{{ form.nit.id_for_label }}">NIT:</label>
+							{{ form.nit }}
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s9 m4">
+							{{ form.bank.errors}}
+							<label for="{{ form.bank.id_for_label }}">Banco:</label>
+							{{ form.bank }}
+						</div>
+						<div class="input-field col s9 m4">
+							{{ form.bank_address.errors}}
+							<label for="{{ form.bank_address.id_for_label }}">Dirección del Banco:</label>
+							{{ form.bank_address }}
+						</div>
+						<div class="input-field col s9 m2">
+							{{ form.cup_account.errors}}
+							<label for="{{ form.cup_account.id_for_label }}">Cuenta en CUP:</label>
+							{{ form.cup_account }}
+						</div>
+						<div class="input-field col s9 m2">
+							{{ form.cuc_account.errors}}
+							<label for="{{ form.cuc_account.id_for_label }}">Cuenta en CUC:</label>
+							{{ form.cuc_account }}
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s9 m4">
+							{{ form.commercial_register_cup.errors }}
+							<label for="{{ form.commercial_register_cup.id_for_label }}">Registro Comercial CUP:</label>
+							{{ form.commercial_register_cup }}
+						</div>
+						<div class="input-field col s9 m4">
+							{{ form.commercial_register_cuc.errors}}
+							<label for="{{ form.commercial_register_cuc.id_for_label }}">Registro Comercial CUC:</label>
+							{{ form.commercial_register_cuc }}
+						</div>
+						<div class="input-field col s9 m4">
+							{{ form.licence_to_operate_on_divisa.errors}}
+							<label for="{{ form.licence_to_operate_on_divisa.id_for_label }}">Licencia CUC:</label>
+							{{ form.licence_to_operate_on_divisa }}
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s9 m4">
+							{{ form.contract.errors }}
+							<label for="{{ form.contract.id_for_label }}">Contrato:</label>
+							{{ form.contract }}
+						</div>
+
+
+						<div class="input-field col s9 m4 ">
+							{{ form.enterprise_description.errors}}
+							<label for="{{ form.enterprise_description.id_for_label }}">Descripción de la
+								Empresa:</label>
+							{{ form.enterprise_description }}
+							<p>
+								<label>
+									{{ form.has_doubt }}
+									<span>Tiene deudas con PESCATUN ??</span>
+								</label>
+							</p>
+						</div>
+						<div class="input-field col s9 m4">
+							{{ form.ammount_of_doubt.errors}}
+							<label for="{{ form.ammount_of_doubt.id_for_label }}" id="monto" style="Display: none">Monto
+								de la Deuda:</label>
+							{{ form.ammount_of_doubt }}
+						</div>
+						<div class="input-field col s9 m4">
+							{{ form.persons.errors}}
+							<label for="{{ form.person.id_for_label }}">Personal</label>
+							{{ form.persons }}
+							<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Añadir Personas</a>
+						</div>
+						<div class="row" id="inputDeuda">
+							<div class="input-field col s9 m4">
+								<p>
+									<label>
+										{{ form.updated }}
+										<span> Contrato actualizado? </span>
+									</label>
+								</p>
+
+							</div>
+							<div class="col ">
+								<label for="{{ form.signed.id_for_label }}">Fecha de la firma:</label>
+								{{ form.signed }}
+							</div>
+							<div class="col">
+								<label for="{{ form.type_of_contract.id_for_label }}">Tipo de Contrato:</label>
+								{{form.type_of_contract}}
+							</div>
+
+						</div>
+
+
+					</div>
+
+
+					<button id="clienteadd" class="btn waves-effect waves-light" type="submit" name="action">Añadir!<i
+							class="icon right">done</i>
+					</button>
+				</form>
 			</div>
 		</div>
-	
+	</div>
+</div>
+
 {% endblock %}
 
 {% block ayuda %}
-  <div class="tap-target" data-target="menu">
-      <div class="tap-target-content">
-        <h5>Nuevo Cliente</h5>
-		Esta vista permite añadir nuevos "Clientes" o Fichas de Cliente a la Base de Datos 
-        <p>1: Añadir las personas mediante el boton "Añadir Personas"</p>
-        2: Completar el formulario restante
-		<p>3: Concluir presionando "Añadir"</p>       
-    </div>
-  </div>
+<div class="tap-target" data-target="menu">
+	<div class="tap-target-content">
+		<h5>Nuevo Cliente</h5>
+		Esta vista permite añadir nuevos "Clientes" o Fichas de Cliente a la Base de Datos
+		<p>1: Añadir las personas mediante el boton "Añadir Personas"</p>
+		2: Completar el formulario restante
+		<p>3: Concluir presionando "Añadir"</p>
+	</div>
+</div>
 {% endblock %}

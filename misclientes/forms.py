@@ -54,6 +54,8 @@ class EmpresaForm(ModelForm):
                  'contract',
                  'persons',
 		 'updated',
+         'signed',
+         'type_of_contract'
                              ]
      #   field_classes = {
      #       'persons': ModelChoiceField(queryset=Cliente.objects.filter(cogido=False), *args)

@@ -245,3 +245,49 @@ django.core.exceptions.ImproperlyConfigured: You're using the staticfiles app wi
 [2020-07-02 14:24:58,138] INFO "GET / HTTP/1.1" 200 1768
 [2020-07-02 14:24:58,212] WARNING "GET /static/css/materialize.min.css HTTP/1.1" 404 179
 [2020-07-02 14:24:58,212] WARNING "GET /static/css/google_material_icons.css HTTP/1.1" 404 179
+[2020-08-03 16:37:43,919] INFO Watching for file changes with StatReloader
+[2020-08-03 16:38:13,665] INFO Watching for file changes with StatReloader
+[2020-08-03 16:38:22,301] INFO "GET / HTTP/1.1" 200 1768
+[2020-08-03 16:38:22,435] INFO "GET /static/css/google_material_icons.css HTTP/1.1" 200 859
+[2020-08-03 16:38:22,436] INFO "GET /static/css/materialize.min.css HTTP/1.1" 200 141841
+[2020-08-03 16:38:22,924] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
+[2020-08-03 16:38:40,463] INFO "POST / HTTP/1.1" 302 0
+[2020-08-03 16:39:26,716] INFO "GET / HTTP/1.1" 200 1768
+[2020-08-03 16:39:27,088] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
+[2020-08-03 16:39:30,869] INFO "GET /index HTTP/1.1" 301 0
+[2020-08-03 16:39:30,983] INFO "GET /index/ HTTP/1.1" 200 7004
+[2020-08-03 16:39:31,056] INFO "GET /static/css/extra.css HTTP/1.1" 200 317
+[2020-08-03 16:39:31,063] INFO "GET /static/js/jquery-2.2.2.min.js HTTP/1.1" 200 85656
+[2020-08-03 16:39:31,068] INFO "GET /static/js/pace.min.js HTTP/1.1" 200 12363
+[2020-08-03 16:39:31,082] INFO "GET /static/js/materialize.min.js HTTP/1.1" 200 181109
+[2020-08-03 16:39:31,085] INFO "GET /static/js/clientes.js HTTP/1.1" 200 2182
+[2020-08-03 16:39:31,298] INFO "GET /static/fonts/google_material_icons.woff2 HTTP/1.1" 200 55208
+[2020-08-03 16:39:42,744] INFO "GET /expirados/ HTTP/1.1" 200 3263
+[2020-08-03 16:39:45,173] INFO "GET /expirados/ HTTP/1.1" 200 3263
+[2020-08-03 16:39:47,174] INFO "GET /addclientes HTTP/1.1" 301 0
+[2020-08-03 16:39:47,454] INFO "GET /addclientes/ HTTP/1.1" 200 10493
+[2020-08-03 16:43:25,088] INFO Watching for file changes with StatReloader
+[2020-08-03 16:43:36,768] WARNING Session data corrupted
+[2020-08-03 16:43:36,849] INFO "GET /addclientes/ HTTP/1.1" 302 0
+[2020-08-03 16:43:37,288] WARNING Session data corrupted
+[2020-08-03 16:43:37,498] INFO "GET /accounts/login/?next=/addclientes/ HTTP/1.1" 200 1918
+[2020-08-03 16:43:42,972] WARNING Session data corrupted
+[2020-08-03 16:43:43,388] INFO "POST / HTTP/1.1" 302 0
+[2020-08-03 16:43:43,563] INFO "GET /addclientes/ HTTP/1.1" 200 10141
+[2020-08-03 16:43:50,217] INFO "GET /admin/ HTTP/1.1" 200 5910
+[2020-08-03 16:43:50,597] INFO "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[2020-08-03 16:43:50,610] INFO "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[2020-08-03 16:43:50,713] INFO "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[2020-08-03 16:43:50,777] INFO "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[2020-08-03 16:43:50,940] INFO "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[2020-08-03 16:44:49,215] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/admin.py changed, reloading.
+[2020-08-03 16:44:49,713] INFO Watching for file changes with StatReloader
+[2020-08-03 16:45:05,451] INFO "GET /admin/logout/ HTTP/1.1" 302 0
+[2020-08-03 16:45:05,514] INFO "GET / HTTP/1.1" 200 1768
+[2020-08-03 16:45:09,630] INFO "POST / HTTP/1.1" 302 0
+[2020-08-03 16:45:09,683] INFO "GET /index/ HTTP/1.1" 200 7004
+[2020-08-03 16:45:11,641] INFO "GET /addclientes/ HTTP/1.1" 200 10141
+[2020-08-03 16:45:38,511] INFO /home/dcruz/WebApps/Github/django-misclientes/misclientes/forms.py changed, reloading.
+[2020-08-03 16:45:39,018] INFO Watching for file changes with StatReloader
+[2020-08-03 16:45:41,585] INFO "GET /addclientes/ HTTP/1.1" 200 10522
+[2020-08-03 16:45:41,972] INFO "GET /static/favicon-32x32.png HTTP/1.1" 200 2030
