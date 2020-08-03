@@ -208,6 +208,8 @@ class EnterpriseUpdate(UpdateView):
     'licence_to_operate_on_divisa',
     'contract',
     'updated',
+    'signed',
+    'type_of_contract'
     ]
     model= Enterprise
     template_name_suffix = '_update_form'

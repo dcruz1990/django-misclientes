@@ -120,6 +120,16 @@
 								<div class="row" id="inputDeuda">
 								</div>
 							</div>
+							<div class="row">
+								<div class="col ">
+									<label for="{{ form.signed.id_for_label }}">Fecha de la firma:</label>
+									{{ form.signed }}
+								</div>
+								<div class="col">
+									<label for="{{ form.type_of_contract.id_for_label }}">Tipo de Contrato:</label>
+									{{form.type_of_contract}}
+								</div>
+							</div>
 						
                         <button class="btn waves-effect waves-light" type="submit">Actualizar Cliente
                         <i class="material-icons right">send</i>
