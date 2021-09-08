@@ -1,5 +1,5 @@
 Django>=2.0.6
-Pillow==8.1.1
+Pillow==8.3.2
 python-dotenv==0.10.3
 pytz==2018.4
 uwsgi==2.0.18
