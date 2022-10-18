@@ -275,5 +275,22 @@ def printClientList(request):
     HTML(string=html).write_pdf(response, font_config=font_config)
     return response
 
+@login_required
+def printBuyersList(request):
+    enterprise = Enterprise.objects.all().order_by('signed')
+    total_clientes = enterprise.count()
+    fecha = datetime.today()
+    response = HttpResponse(content_type="application/pdf")
+    response['Content-Disposition'] = "attach; filename=Lista-fichas-de-compradores-todos.pdf"
+    html = render_to_string("listapdfBuyers.html", {
+        'empresas': enterprise,
+        'fecha': fecha,
+        'total': total_clientes,
+        
+    })
+    font_config = FontConfiguration()
+    HTML(string=html).write_pdf(response, font_config=font_config)
+    return response
+
 
 

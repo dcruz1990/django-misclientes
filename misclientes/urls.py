@@ -10,7 +10,7 @@ from django.urls import path, include
 
 from misclientes.views import index, ListaClientesView, addempresa, deletemodel, AddPersonaView, \
     ClienteDetailView, EnterpriseUpdate, ClienteUpdate, ClienteDeleteView, ClienteCreateView, printToPDF, \
-    printClientList, ExpiredContracts
+    printClientList, ExpiredContracts, printBuyersList
 
 urlpatterns = [
     path('index/', index, name='index'),
@@ -28,5 +28,6 @@ urlpatterns = [
     path('createperson/<int:pk>', ClienteCreateView.as_view(), name='create-person'),
     path('printreport/<int:pk>', printToPDF, name='imprimir-ficha'),
     path('printclientlist', printClientList, name='imprimir-todos-clientes'),
+    path('printbuyerslist', printBuyersList, name='imprimir-todos-compradores'),
     path('', auth_views.LoginView.as_view(), name='login'),
 ]
