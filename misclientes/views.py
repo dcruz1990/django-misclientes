@@ -260,7 +260,7 @@ def printToPDF(request, pk):
 #Exporta a pdf todos los clientes
 @login_required
 def printClientList(request):
-    enterprise = Enterprise.objects.all().order_by('signed')
+    enterprise = Enterprise.objects.all().order_by('contract')
     total_clientes = enterprise.count()
     fecha = datetime.today()
     response = HttpResponse(content_type="application/pdf")
@@ -277,7 +277,7 @@ def printClientList(request):
 
 @login_required
 def printBuyersList(request):
-    enterprise = Enterprise.objects.all().order_by('signed')
+    enterprise = Enterprise.objects.all().order_by('contract')
     total_clientes = enterprise.count()
     fecha = datetime.today()
     response = HttpResponse(content_type="application/pdf")
